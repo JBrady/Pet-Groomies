@@ -6,6 +6,7 @@ import Head from 'next/head'
 import { Router } from 'next/router'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react'
 
 // ** Store Imports
 import { store } from 'src/store'
@@ -150,6 +151,7 @@ const App = (props: ExtendedAppProps) => {
             </SettingsConsumer>
           </SettingsProvider>
         </AuthProvider>
+        <Analytics />
       </CacheProvider>
     </Provider>
   )
